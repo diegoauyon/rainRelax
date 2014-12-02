@@ -63,7 +63,9 @@
             }
 
             //Jplayer
-            server = "174.36.223.28";
+            //http://173.193.205.68/audio1110/RainyMood.m4a
+            //server = "174.36.223.28";
+            server = "173.193.205.68";
 
             jQuery.noConflict(); // This prevents a conflict with prototype.js.
             jQuery(document).ready(function(){
@@ -73,6 +75,7 @@
                 jQuery("#jquery_jplayer_1").jPlayer({
                     ready: function() {
                         jQuery(this).jPlayer("setMedia", {
+                            mp3: "http://" + server + "/audio1108/RainyMood.mp3",
                             m4a: "http://" + server + "/audio1108/RainyMood.m4a",
                             oga: "http://" + server + "/audio1108/RainyMood.ogg"
                         }).jPlayer("play");
